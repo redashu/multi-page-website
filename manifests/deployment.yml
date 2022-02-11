@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: redashumultipagewebsite 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: redashumultipagewebsite
+  template:
+    metadata:
+      labels:
+        app: redashumultipagewebsite 
+    spec:
+      containers:
+        - name: redashumultipagewebsite 
+          image: ashutoshh.azurecr.io/redashumultipagewebsite
+          ports:
+          - containerPort: 80
